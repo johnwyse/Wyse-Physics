@@ -1,0 +1,94 @@
+body {
+    background-color: #ffcc99;
+    font-family: georgia;
+}
+
+.banner {
+    background-color: #d14803;
+    text-align: center;
+    font-size: 2rem;
+    padding: 1rem 1rem;
+}
+
+.banner a {
+    text-align: center;
+    margin-right: 2rem;
+    margin-left: 2rem;
+    color:#004c99;
+
+}
+
+.banner a:hover {
+    color:#333c39;
+}
+
+.welcome {
+    text-align: center;
+    line-height: 20px;
+    padding: 1rem;
+}
+
+ul {
+    list-style: inside;
+    text-align: left;
+    display: table;
+    margin: 0 auto;
+}
+
+.welcome p {
+    border: 10rem;
+    font-size: 20pt;
+}
+
+footer {
+    text-align: right;
+    margin-right: 3rem;
+    margin-bottom: 2rem;
+}
+    
+.title {
+    border: 10rem;
+    color: #d14803;
+    text-align: center;
+    margin-top: 1rem;
+
+}
+table, tr, td {
+    border: 3px solid #d14803;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1rem;
+}
+
+tr {
+    height: 5rem;
+}
+
+
+td {
+    text-align: center;
+    width: 16rem;
+    color: #d14803;
+    font-size: 16pt;
+}
+
+tr:first-child {
+    font-weight: bolder;
+}
+
+.example {
+    margin-top: 5rem;
+    text-align: left;
+    margin-left: 10rem;
+}
+
+.calculator, .practice {
+    margin-top: 3rem;
+    text-align: left;
+    margin-left: 10rem;
+}
+
+.inline-block {
+    display: inline-block;
+    padding: 2rem;
+}

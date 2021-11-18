@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+        <link href="style/styles.css" rel="stylesheet">
+        <title>Force</title>
+        <script>
+            document.addEventListener("DOMContentLoaded", function()
+            {
+                document.querySelector('#calculate').addEventListener('click', function()
+                {
+                    let mass = parseFloat(document.querySelector('#mass').value);
+                    let acceleration = parseFloat(document.querySelector('#acc').value);
+                    let force = mass*acceleration;
+
+                    // Check if user input text instead of numbers, print answer
+                    if ((isNaN(force)) == true)
+                    {
+                        document.querySelector("#calc_answer").innerHTML = "Please enter only numbers";
+                    }
+                    else
+                    {
+                        document.querySelector("#calc_answer").innerHTML = "The force is " + force + " N";
+                    }
+                });
+
+                // Generate new problem
+                document.querySelector('#generate').addEventListener('click', function()
+                {
+                    // Reset feedback styling
+                    document.querySelector('#feedback').innerHTML = "";
+                    document.querySelector('#student_answer').style.backgroundColor = 'white';
+                    document.querySelector('#student_answer').value = "";
+
+                    // Create random integers between 3 and 12 for the problem
+                    let random_mass = Math.floor(Math.random() * 10) + 3;
+                    let random_acc = Math.floor(Math.random() * 10) + 3;
+
+                    // Print new problem for user
+                    document.querySelector("#problem").innerHTML = "What is the force applied on a " + random_mass + " kg cart that moves forward at a rate of " + random_acc + " m/s/s?";
+
+                    // Check answer when user submits
+                    document.querySelector('#check').addEventListener('click', function()
+                    {
+                        let answer = random_mass*random_acc;
+                        let student_answer = parseFloat(document.querySelector('#student_answer').value);
+
+                        if ((isNaN(student_answer)) == true)
+                        {
+                            document.querySelector('#feedback').innerHTML = "Your answer should contain only numbers";
+                        }
+                        else if (student_answer == answer)
+                        {
+                            document.querySelector('#feedback').innerHTML = "Correct! Nice work.";
+                            document.querySelector('#student_answer').style.backgroundColor = 'green';
+                        }
+                        else
+                        {
+                            document.querySelector('#feedback').innerHTML = "Incorrect! Keep trying.";
+                            document.querySelector('#student_answer').style.backgroundColor = 'red';
+                        }
+                    });
+                });
+            });
+        </script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    </head>
+    <body>
+
+        <div class="banner">
+            <a href="index.html">Home</a>
+            <a href="kineticenergy.html">Kinetic Energy</a>
+            <a href="acceleration.html"> Acceleration</a>
+        </div>
+
+        <div class="title">
+            <h1>Force</h1>
+            <h3>Force = (mass)(acceleration) <br> F = ma</h3>
+            <img alt="Force Diagram" src="images/force.jpg" height="200" width="400"/>
+            <p>source: https://www.geeksforgeeks.org/newtons-second-law-of-motion/</p>
+        </div>
+
+        <!-- Table of Variables, Defs, Symbols, Units related to force -->
+        <table>
+            <tr>
+                <td>Variable</td>
+                <td>Definition</td>
+                <td>Symbol</td>
+                <td>Unit</td>
+            </tr>
+            <tr>
+                <td>Force</td>
+                <td>A push or pull on an object</td>
+                <td>F</td>
+                <td>Newton (N)</td>
+            </tr>
+            <tr>
+                <td>Mass</td>
+                <td>The amount of matter in an object</td>
+                <td>m</td>
+                <td>kilograms (kg)</td>
+            </tr>
+            <tr>
+                <td>Acceleration</td>
+                <td>The rate at which velocity changes</td>
+                <td>a</td>
+                <td>meters per second per second (m/s/s)</td>
+            </tr>
+        </table>
+
+        <!-- Example Calculation of Force-->
+        <div class="example">
+            <h4>Example Calculation</h4>
+            <p>
+                What was the force applied to a soccer ball if the ball has a mass of 2 kg and sped up at a rate of 4 m/s/s after being kicked?
+                <br><br>
+                F = ? N
+                <br>
+                m = 2 kg
+                <br>
+                a = 4 m/s/s
+                <br><br>
+                F = ma
+                <br><br>
+                F = (2)(4)
+                <br>
+                F = 8 N
+            </p>
+        </div>
+
+        <!-- Force Calculator -->
+        <div class="calculator">
+            <h4>Force Calculator</h4>
+            <form>
+                The object's mass is: <input id="mass" placeholder="?" type="text"> kg
+                <br>
+                The object's acceleration is:  <input id="acc" placeholder="?" type="text"> m/s/s
+                <br>
+                <button type="button" id="calculate">Solve!</button>
+                <p id="calc_answer"></p>
+            </form>
+        </div>
+
+        <!-- Randomly-Generated Practice Problem -->
+        <div class="practice">
+            <h4>Force Practice Problem</h4>
+            <form>
+                <button type="button" id="generate">Generate New Problem</button>
+                <br><br>
+                <p id="problem"></p>
+                <input id="student_answer" autocomplete="off" placeholder="?" type="text"> N
+                <br>
+                <p id="feedback"></p>
+                <br>
+                <button type="button" id="check">Check Yourself</button>
+            </form>
+        </div>
+
+        <footer>
+            <h6>John Wyse</h6>
+            <h6>john.w.wyse@gmail.com</h6>
+        </footer>
+    </body>
+</html>
