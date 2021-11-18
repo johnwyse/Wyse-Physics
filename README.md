@@ -1,4 +1,4 @@
-# Wyse-Physics
+Physics
 
 This website has a homepage and 3 linked pages for force, kinetic energy, and acceleration.
 
