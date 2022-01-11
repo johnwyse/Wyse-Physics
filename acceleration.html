@@ -10,7 +10,7 @@
         <script>
             document.addEventListener("DOMContentLoaded", function()
             {
-                document.querySelector('#calculate').addEventListener('click', function()
+                document.querySelector('#calculate').addEventListener('click', () =>
                 {
                     let time = parseFloat(document.querySelector('#time').value);
                     let vi = parseFloat(document.querySelector('#vi').value);

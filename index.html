@@ -3,32 +3,235 @@
 <html lang="en">
     <head>
         <link href="style/styles.css" rel="stylesheet">
-        <title>Mr. Wyse's Physics References</title>
+        <script src=physics.js></script>
+        <title>Physics</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
     
     <body>
         <!-- Navigation Banner -->
         <div class="banner">
+            <button class="link" id="home_button">Home</button>
             <a href="index.html">Home</a>
             <a href="force.html">Force</a>
             <a href="kineticenergy.html">Kinetic Energy</a>
             <a href="acceleration.html"> Acceleration</a>
         </div>
-        
-        <div class="welcome">
-            <h2>Welcome to Mr. Wyse's Physics References</h2> 
-            <img alt="Mr. Wyse" src="images/wyse.jpg" height="240" width="200"/>
-            
-            <hr>
-            
-            <p>Topics include:</p>
-                <ul>
-                    <li>Force</li>
-                    <li>Kinetic Energy</li>
-                    <li>Acceleration</li>
-                </ul>
-            
+
+        <!-- Homepage -->
+        <div class="page" id="homepage">
+          <div class="welcome">
+              <h2>Welcome to Mr. Wyse's Physics References</h2> 
+              <img alt="Mr. Wyse" src="images/wyse.jpg" height="240" width="200"/>
+              
+              <hr>
+              
+              <p>Topics include:</p>
+                  <ul>
+                      <li>Force</li>
+                      <li>Kinetic Energy</li>
+                      <li>Acceleration</li>
+                  </ul>
+              
+          </div>
         </div>
+
+        <!-- Force -->
+        <div class="page" id="force">
+          <div class="title">
+              <h1>Force</h1>
+              <h3>Force = (mass)(acceleration) <br> F = ma</h3>
+              <img alt="Force Diagram" src="images/force.jpg" height="200" width="400"/>
+              <p>source: https://www.geeksforgeeks.org/newtons-second-law-of-motion/</p>
+          </div>
+
+          <!-- Table of Variables, Defs, Symbols, Units related to force -->
+          <table>
+              <tr>
+                  <td>Variable</td>
+                  <td>Definition</td>
+                  <td>Symbol</td>
+                  <td>Unit</td>
+              </tr>
+              <tr>
+                  <td>Force</td>
+                  <td>A push or pull on an object</td>
+                  <td>F</td>
+                  <td>Newton (N)</td>
+              </tr>
+              <tr>
+                  <td>Mass</td>
+                  <td>The amount of matter in an object</td>
+                  <td>m</td>
+                  <td>kilograms (kg)</td>
+              </tr>
+              <tr>
+                  <td>Acceleration</td>
+                  <td>The rate at which velocity changes</td>
+                  <td>a</td>
+                  <td>meters per second per second (m/s/s)</td>
+              </tr>
+          </table>
+
+          <!-- Example Calculation of Force-->
+          <div class="example">
+              <h4>Example Calculation</h4>
+              <p>
+                  What was the force applied to a soccer ball if the ball has a mass of 2 kg and sped up at a rate of 4 m/s/s after being kicked?
+                  <br><br>
+                  F = ? N
+                  <br>
+                  m = 2 kg
+                  <br>
+                  a = 4 m/s/s
+                  <br><br>
+                  F = ma
+                  <br><br>
+                  F = (2)(4)
+                  <br>
+                  F = 8 N
+              </p>
+          </div>
+
+          <!-- Force Calculator -->
+          <div class="calculator">
+              <h4>Force Calculator</h4>
+              <form>
+                  The object's mass is: <input id="mass" placeholder="?" type="text"> kg
+                  <br>
+                  The object's acceleration is:  <input id="acc" placeholder="?" type="text"> m/s/s
+                  <br>
+                  <button type="button" id="calculate">Solve!</button>
+                  <p id="calc_answer"></p>
+              </form>
+          </div>
+
+          <!-- Randomly-Generated Practice Problem -->
+          <div class="practice">
+              <h4>Force Practice Problem</h4>
+              <form>
+                  <button type="button" id="generate">Generate New Problem</button>
+                  <br><br>
+                  <p id="problem"></p>
+                  <input id="student_answer" autocomplete="off" placeholder="?" type="text"> N
+                  <br>
+                  <p id="feedback"></p>
+                  <br>
+                  <button type="button" id="check">Check Yourself</button>
+              </form>
+          </div>
+        </div> 
+
+        <!-- Acceleration -->
+        <div class="page" id="acceleration">
+          <div class="title">
+            <h1>Acceleration</h1>
+            <h3>Acceleration = (final velocity - initial velocity)/(time) <br> a = (vf-vi)/t</h3>
+            <div class="inline-block">
+                <img alt="Acceleration1" src="images/acc1.jpg" height="200" width="400"/>
+            </div>
+            <div class="inline-block">
+                <img alt="Acceleration2" src="images/acc2.jpg" height="200" width="350"/>
+            </div>
+            <p>source: https://www.youtube.com/watch?v=4dCrkp8qgLU&ab_channel=ProfessorDaveExplains</p>
+          </div>
+        
+          <!-- Table of Variables, Defs, Symbols, Units related to acceleration -->
+          <table>
+              <tr>
+                  <td>Variable</td>
+                  <td>Definition</td>
+                  <td>Symbol</td>
+                  <td>Unit</td>
+              </tr>
+              <tr>
+                  <td>Acceleration</td>
+                  <td>The rate at which velocity changes</td>
+                  <td>a</td>
+                  <td>meters per second per second (m/s/s)</td>
+              </tr>
+              <tr>
+                  <td>Initial Velocity</td>
+                  <td>How fast an object is moving at the beginning of an event</td>
+                  <td>vi</td>
+                  <td>meters per second (m/s)</td>
+              </tr>
+              <tr>
+                  <td>Final Velocity</td>
+                  <td>How fast an object is moving at the end of an event</td>
+                  <td>vf</td>
+                  <td>meters per second (m/s)</td>
+              <tr>
+                  <td>Time</td>
+                  <td>The duration of a given event</td>
+                  <td>t</td>
+                  <td>seconds (s)</td>
+              </tr>
+              </tr>
+          </table>
+
+          <!-- Example Calculation of Force-->
+          <div class="example">
+              <h4>Example Calculation</h4>
+              <p>
+                  What was the acceleration of a car that sped up from 19 m/s to 34 m/s in 5 seconds?
+                  <br><br>
+                  a = ? m/s/s
+                  <br>
+                  vi = 19 m/s
+                  <br>
+                  vf = 34 m/s
+                  <br>
+                  t = 5 s
+                  <br><br>
+                  a = (vf-vi)/t
+                  <br><br>
+                  a = (34-19)/5
+                  <br>
+                  a = 15/5
+                  <br>
+                  a = 3 m/s/s
+              </p>
+          </div>
+
+          <!-- Acceleration Calculator -->
+          <div class="calculator">
+              <h4>Acceleration Calculator</h4>
+              <form>
+                  The object's initial velocity is: <input id="vi" placeholder="?" type="text"> m/s
+                  <br>
+                  The object's final velocity is: <input id="vf" placeholder="?" type="text"> m/s
+                  <br>
+                  The time is:  <input id="time" placeholder="?" type="text"> s
+                  <br>
+                  <button type="button" id="calculate">Solve!</button>
+                  <p id="answer"></p>
+              </form>
+          </div>
+
+          <!-- Randomly-Generated Practice Problem -->
+          <div class="practice">
+              <h4>Acceleration Practice Problem</h4>
+              <form>
+                  <button type="button" id="generate">Generate New Problem</button>
+                  <br><br>
+                  <p id="problem"></p>
+                  <p id="rounding"></p>
+                  <input id="student_answer" autocomplete="off" placeholder="?" type="text"> m/s/s
+                  <br>
+                  <p id="feedback"></p>
+                  <br>
+                  <button type="button" id="check">Check Yourself</button>
+              </form>
+          </div>
+        </div> 
+
+        <div class="page" id="kinetic_energy">
+          
+
+        </div>
+
+
         <footer>
             <h6>John Wyse</h6>
         </footer>
