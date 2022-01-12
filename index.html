@@ -3,7 +3,10 @@
 <html lang="en">
     <head>
         <link href="style/styles.css" rel="stylesheet">
-        <script src=physics.js></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200&display=swap" rel="stylesheet">
+        <script src=physics.js></script>  
         <title>Physics</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     </head>
@@ -11,11 +14,10 @@
     <body>
         <!-- Navigation Banner -->
         <div class="banner">
-            <button class="link" id="home_button">Home</button>
-            <a href="index.html">Home</a>
-            <a href="force.html">Force</a>
-            <a href="kineticenergy.html">Kinetic Energy</a>
-            <a href="acceleration.html"> Acceleration</a>
+            <button class="pagelink" data-page="homepage">Home</button>
+            <button class="pagelink" data-page="force">Force</button>
+            <button class="pagelink" data-page="kinetic_energy">Kinetic Energy</button>
+            <button class="pagelink" data-page="acceleration">Acceleration</button>
         </div>
 
         <!-- Homepage -->
@@ -118,6 +120,7 @@
                   <p id="feedback"></p>
                   <br>
                   <button type="button" id="check">Check Yourself</button>
+                  <p></p>
               </form>
           </div>
         </div> 
@@ -226,11 +229,93 @@
           </div>
         </div> 
 
+        <!-- Kinetic Energy -->
         <div class="page" id="kinetic_energy">
+          <div class="title">
+            <h1>Kinetic Energy</h1>
+            <h3>Kinetic Energy = (1/2)(mass)(velocity^2) <br> KE = (1/2)mv^2</h3>
+            <img alt="Kinetic Energy Diagram" src="images/ke.jpg" height="200" width="400"/>
+            <p>source: https://images.slideplayer.com/26/8287330/slides/slide_2.jpg</p>
+          </div>
           
-
+          <!-- Table of Variables, Defs, Symbols, Units related to kinetic energy -->
+          <table>
+              <tr>
+                  <td>Variable</td>
+                  <td>Definition</td>
+                  <td>Symbol</td>
+                  <td>Unit</td>
+              </tr>
+              <tr>
+                  <td>Kinetic Energy</td>
+                  <td>Energy due to an object's motion</td>
+                  <td>KE</td>
+                  <td>Joules (J)</td>
+              </tr>
+              <tr>
+                  <td>Mass</td>
+                  <td>The amount of matter in an object</td>
+                  <td>m</td>
+                  <td>kilograms (kg)</td>
+              </tr>
+              <tr>
+                  <td>Velocity</td>
+                  <td>The rate at which displacement changes</td>
+                  <td>v</td>
+                  <td>meters per second (m/s)</td>
+              </tr>
+          </table>
+          
+          <!-- Example Calculation of Kinetic Energy-->
+          <div class="example">
+              <h4>Example Calculation</h4>
+              <p>
+                  What is the kinetic energy of a 3 kg bird flying at 5 m/s
+                  <br><br>
+                  KE = ? J
+                  <br>
+                  m = 3 kg
+                  <br>
+                  v = 5 m/s
+                  <br><br>
+                  KE = (1/2)mv^2
+                  <br><br>
+                  KE = (1/2)(3)(5^2)
+                  <br>
+                  KE = (1/2)(3)(25)
+                  <br>
+                  KE = 37.5 J
+              </p>
+          </div>
+          
+          <!-- Kinetic Energy Calculator -->
+          <div class="calculator">
+              <h4>Kinetic Energy Calculator</h4>
+              <form>
+                  The object's mass is: <input id="mass" placeholder="?" type="text"> kg
+                  <br>
+                  The object's velocity is: <input id="vel" placeholder="?" type="text"> m/s
+                  <br>
+                  <button type="button" id="calculate">Solve!</button>
+                  <p id="answer"></p>
+              </form>
+          </div>
+          
+          <!-- Randomly-Generated Practice Problem -->
+          <div class="practice">
+              <h4>Kinetic Energy Practice Problem</h4>
+              <form>
+                  <button type="button" id="generate">Generate New Problem</button>
+                  <br><br>
+                  <p id="problem"></p>
+                  <input id="student_answer" autocomplete="off" placeholder="?" type="text"> J
+                  <br>
+                  <p id="feedback"></p>
+                  <br>
+                  <button type="button" id="check">Check Yourself</button>
+              </form>
+          </div>
         </div>
-
 
         <footer>
             <h6>John Wyse</h6>

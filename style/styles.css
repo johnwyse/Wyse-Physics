@@ -1,6 +1,6 @@
 body {
-    background-color:rgb(222, 228, 224);
-    font-family: Dosis;
+  background-color:rgb(222, 228, 224);
+  font-family: 'Barlow', sans-serif;
 }
 
 .banner {
@@ -13,17 +13,17 @@ body {
     margin: -8px;
 }
 
-button.link {
+button.pagelink {
   background: none;
   border: none;
   cursor: pointer;
   text-align: justify;
-  margin-right: 1rem;
-  margin-left: 1rem;
+  margin-right: .6rem;
+  margin-left: .6rem;
   color: rgb(222, 228, 224);
   text-decoration: none;
   font-size: 1.2rem;
-  font-family: Dosis;
+  font-family: 'Barlow', sans-serif;
 }
 
 .banner a {
@@ -35,7 +35,7 @@ button.link {
 
 }
 
-button.link:hover {
+button.pagelink:hover {
     color: gray;
 }
 
@@ -72,7 +72,7 @@ footer {
 
 }
 table, tr, td {
-    border: 3px solid rgb(45, 45, 122);
+    border: 2px solid rgb(45, 45, 122);
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
@@ -81,35 +81,45 @@ table, tr, td {
 
 tr {
     height: 5rem;
+    background-color: rgb(242, 247, 244);
 }
 
 
 td {
     text-align: center;
-    width: 16rem;
+    width: 10rem;
     color: rgb(45, 45, 122);
     font-size: 16pt;
+    padding: 3px;
 }
 
 tr:first-child {
     font-weight: bolder;
+    background-color: rgba(128, 128, 128, 0.5);
 }
 
-.example {
-    margin-top: 5rem;
-    text-align: left;
-    margin-left: 5rem;
+.example, .calculator, .practice {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
     display: block;
-}
-
-.calculator, .practice {
-    margin-top: 3rem;
-    text-align: left;
-    margin-left: 5rem;
-    display: block;
+    border: 2px solid rgb(45, 45, 122);
+    background-color: rgb(242, 247, 244);
+    width: flex;
+    max-width: 42rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 3px;
 }
 
 .inline-block {
     display: inline-block;
-    padding: 2rem;
+}
+
+.page {
+  display: none;
+}
+
+#homepage {
+  display: block;
 }
