@@ -115,9 +115,6 @@ tr:first-child {
     margin-left: auto;
     margin-right: auto;
     padding: 3px;
-    first-child {
-      font-size: 3rem;
-    }
 }
 
 .inline-block {
@@ -128,12 +125,36 @@ tr:first-child {
 .source {
   font-size: 0.7rem;
 }
+
+form > button {
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  border-radius: 4px;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+
+form > button:hover {
+  background-color: #555555;
+  color: white;
+}
+
+form > input {
+  width: 60px;
+}
+
 #footer {
   text-align: right;
   padding-left: 1rem;
   padding-right: 1rem;
   font-style: italic;
 }
+
+.check, .student_answer, .unit {
+  display: none;
+}
+
 .page {
   display: none;
 }
