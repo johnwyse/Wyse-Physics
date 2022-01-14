@@ -38,6 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Generate new force problem
     document.querySelector('#generate_force').addEventListener('click', function()
     {
+        document.querySelector('#student_force_answer').style.display = 'inline-block';
+        document.querySelector('#force_unit').style.display = 'inline-block';
+        document.querySelector('#check_force').style.display = 'inline-block';
+        
         // Reset feedback styling
         document.querySelector('#force_feedback').innerHTML = "";
         document.querySelector('#student_force_answer').style.backgroundColor = 'white';
@@ -98,6 +102,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Generate new acceleration problem
     document.querySelector('#generate_acc').addEventListener('click', function()
     {
+        document.querySelector('#student_acc_answer').style.display = 'inline-block';
+        document.querySelector('#acc_unit').style.display = 'inline-block';
+        document.querySelector('#check_acc').style.display = 'inline-block';
+        
         // Reset feedback styling
         document.querySelector('#acc_feedback').innerHTML = "";
         document.querySelector('#student_acc_answer').style.backgroundColor = 'white';
@@ -159,6 +167,10 @@ document.addEventListener("DOMContentLoaded", function() {
     // Generate new kinetic energy problem
     document.querySelector('#generate_ke').addEventListener('click', function()
     {
+        document.querySelector('#student_ke_answer').style.display = 'inline-block';
+        document.querySelector('#ke_unit').style.display = 'inline-block';
+        document.querySelector('#check_ke').style.display = 'inline-block';
+        
         // Reset feedback styling
         document.querySelector('#ke_feedback').innerHTML = "";
         document.querySelector('#student_ke_answer').style.backgroundColor = 'white';

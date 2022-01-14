@@ -51,7 +51,7 @@
           <div class="title">
               <h1>Force</h1>
               <h3>Force = (mass)(acceleration) <br> F = ma</h3>
-              <img alt="Force Diagram" src="images/force.jpg" height="200" width="400"/>
+              <img alt="Force Diagram" src="images/force.jpg" width="350"/>
               <p class="source">source: https://www.geeksforgeeks.org/newtons-second-law-of-motion/</p>
           </div>
 
@@ -123,10 +123,11 @@
                   <button type="button" id="generate_force">Generate New Problem</button>
                   <br>
                   <p id="force_problem"></p>
-                  <input id="student_force_answer" autocomplete="off" placeholder="?" type="text"> N
+                  <input class="student_answer" id="student_force_answer" autocomplete="off" placeholder="?" type="text">
+                  <p class="unit" id="force_unit">N</p>
                   <br>
                   <p id="force_feedback"></p>
-                  <button type="button" id="check_force">Check Yourself</button>
+                  <button class="check" type="button" id="check_force">Check Yourself</button>
                   <p></p>
               </form>
           </div>
@@ -142,10 +143,10 @@
             <h1>Acceleration</h1>
             <h3>Acceleration = (final velocity - initial velocity) / (time) <br> a = (v<sub>f</sub>-v<sub>i</sub>) / t</h3>
             <div class="inline-block">
-                <img alt="Acceleration1" src="images/acc1.jpg" height="200" width="400"/>
+                <img alt="Acceleration1" src="images/acc1.jpg" width="350"/>
             </div>
             <div class="inline-block">
-                <img alt="Acceleration2" src="images/acc2.jpg" height="200" width="350"/>
+                <img alt="Acceleration2" src="images/acc2.jpg" width="290"/>
             </div>
             <p class="source">source: https://www.youtube.com/watch?v=4dCrkp8qgLU&ab_channel=ProfessorDaveExplains</p>
           </div>
@@ -231,10 +232,10 @@
                   <br>
                   <p id="acc_problem"></p>
                   <p id="rounding"></p>
-                  <input id="student_acc_answer" autocomplete="off" placeholder="?" type="text"> m/s/s
-                  <br>
+                  <input class="student_answer" id="student_acc_answer" autocomplete="off" placeholder="?" type="text">
+                  <p class="unit" id="acc_unit">m/s/s</p>
                   <p id="acc_feedback"></p>
-                  <button type="button" id="check_acc">Check Yourself</button>
+                  <button class="check" type="button" id="check_acc">Check Yourself</button>
                   <br><br>
               </form>              
           </div>
@@ -249,7 +250,7 @@
           <div class="title">
             <h1>Kinetic Energy</h1>
             <h3>Kinetic Energy = (1/2)(mass)(velocity<sup>2</sup>) <br> KE = (1/2)mv<sup>2</sup></h3>
-            <img alt="Kinetic Energy Diagram" src="images/ke.jpg" height="200" width="400"/>
+            <img alt="Kinetic Energy Diagram" src="images/ke.jpg" width="350"/>
             <p class="source">source: https://images.slideplayer.com/26/8287330/slides/slide_2.jpg</p>
           </div>
           
@@ -323,10 +324,10 @@
                   <button type="button" id="generate_ke">Generate New Problem</button>
                   <br>
                   <p id="ke_problem"></p>
-                  <input id="student_ke_answer" autocomplete="off" placeholder="?" type="text"> J
-                  <br>
+                  <input class="student_answer" id="student_ke_answer" autocomplete="off" placeholder="?" type="text">
+                  <p class="unit" id="ke_unit">J</p>
                   <p id="ke_feedback"></p>
-                  <button type="button" id="check_ke">Check Yourself</button>
+                  <button class="check" type="button" id="check_ke">Check Yourself</button>
                   <br><br>
               </form>
           </div>
