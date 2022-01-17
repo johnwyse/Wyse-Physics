@@ -109,6 +109,7 @@ tr:first-child {
     text-align: center;
     display: block;
     border: 2px solid rgb(45, 45, 122);
+    border-radius: 4px;
     background-color: rgb(242, 247, 244);
     width: flex;
     max-width: 42rem;
@@ -128,15 +129,15 @@ tr:first-child {
 
 form > button {
   background-color: white;
-  color: black;
-  border: 2px solid #555555;
+  color: rgb(45, 45, 122);
+  border: 2px solid rgb(45, 45, 122);
   border-radius: 4px;
   transition-duration: 0.3s;
   cursor: pointer;
 }
 
 form > button:hover {
-  background-color: #555555;
+  background-color: rgb(45, 45, 122);
   color: white;
 }
 
