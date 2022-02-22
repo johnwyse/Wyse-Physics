@@ -2,7 +2,8 @@
     --blue: rgb(15, 38, 100);
     --light: rgb(15, 38, 100, 0.3);
     --bg: rgb(255, 245, 238);
-    --bglight: rgb(255, 245, 238, 0.7);
+    --bglight: rgb(255, 245, 238, 0.9);
+    --bglighter: rgb(255, 245, 238, 0.3);
   }
 
 body {
@@ -37,7 +38,7 @@ button.pagelink:hover {
 }
 
 #home_title {
-  font-size: 7vw;
+  font-size: 6vw;
   padding: 0.5rem;
   padding-top: 1rem;
   color: var(--bg);
@@ -48,19 +49,23 @@ button.pagelink:hover {
     border-radius: 10px;
     margin: auto;
 }
-.home-button {
-  margin: auto;
-}
 
 .homelink {
   width: 100%;
-  font-size: 5vw;
+  font-size: 3vw;
   text-align: center;
   padding: 0.5rem;
   margin: auto;
   margin-top: 1rem;
   background-color: var(--bglight);
   border-radius: 10px;
+  font-family: 'Barlow', sans-serif;
+}
+
+.homelink:hover {
+  background-color: var(--bglighter);
+  color: var(--bg);
+  cursor: pointer;
 }
 
 
@@ -84,13 +89,13 @@ button.pagelink:hover {
 
 .title {
     border: 10rem;
-    color: rgb(45, 45, 122);
+    color: var(--blue);;
     text-align: center;
     margin-top: 1rem;
 
 }
 table, tr, td {
-    border: 2px solid rgb(45, 45, 122);
+    border: 2px solid var(--blue);
     margin-left: auto;
     margin-right: auto;
     margin-top: 1rem;
@@ -99,21 +104,21 @@ table, tr, td {
 
 tr {
     height: 5rem;
-    background-color: rgb(242, 247, 244);
+    background-color: var(--bg);;
 }
 
 
 td {
     text-align: center;
     width: 9rem;
-    color: rgb(45, 45, 122);
+    color: var(--blue);
     font-size: 1rem;
     padding: 3px;
 }
 
 tr:first-child {
     font-weight: bolder;
-    background-color: rgba(128, 128, 128, 0.5);
+    background-color: var(--light);
 }
 
 .example, .calculator, .practice {
@@ -121,8 +126,8 @@ tr:first-child {
     margin-bottom: 2rem;
     text-align: center;
     display: block;
-    border: 2px solid rgb(45, 65, 122);
-    background-color: rgb(45, 45, 122, 0.3);
+    border: 2px solid var(--blue);
+    background-color: var(--light);
     width: flex;
     max-width: 42rem;
     margin-left: auto;
@@ -141,16 +146,16 @@ tr:first-child {
 
 form > button {
   background-color: white;
-  color: black;
-  border: 2px solid #555555;
+  color: var(--blue);
+  border: 1px solid var(--blue);
   border-radius: 4px;
   transition-duration: 0.3s;
   cursor: pointer;
 }
 
 form > button:hover {
-  background-color: #555555;
-  color: white;
+  background-color: var(--blue);
+  color: var(--bg);
 }
 
 form > input {
