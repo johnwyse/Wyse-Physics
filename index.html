@@ -8,46 +8,41 @@
         <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100;200&display=swap" rel="stylesheet">
         <script src=physics.js></script>  
         <title>Physics</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=yes">
     </head>
     
     <body>
-        <!-- Navigation Banner -->
-        <div class="banner">
-            <button class="pagelink" data-page="homepage">Home</button>
-            <button class="pagelink" data-page="force">Force</button>
-            <button class="pagelink" data-page="kinetic_energy">Kinetic Energy</button>
-            <button class="pagelink" data-page="acceleration">Acceleration</button>
-        </div>
-
         <!-- Homepage -->
         <div class="page" id="homepage">
           <div>
             <p id="home_title">Mr. Wyse's Physics References</p>
           </div>
-          <div id="lists">
-            <div class="inline-block">
-              <h3>Topics include:</h3>
-                <ul>
-                  <li>Force</li>
-                  <li>Kinetic Energy</li>
-                  <li>Acceleration</li>
-                </ul>
+
+          <div class="home-buttons">
+            <div class="home-button">
+              <button class="homelink" data-page="force">Force</button>
             </div>
-            <div class="inline-block">
-              <h3>Pages include:</h3>
-                <ul>
-                  <li>Reference Tables</li>
-                  <li>Example Problem</li>
-                  <li>Calculator</li>
-                  <li>Practice Problems</li>
-                </ul>  
+            <div class="home-button">
+              <button class="homelink" data-page="kinetic_energy">Kinetic Energy</button>
+            </div>
+            <div class="home-button">
+              <button class="homelink" data-page="acceleration">Acceleration</button>
             </div>
           </div>
+
         </div>
 
         <!-- Force -->
+
+
         <div class="page" id="force">
+          <div class="banner">
+            <button class="pagelink" data-page="homepage">Home</button>
+            <button class="pagelink" data-page="force">Force</button>
+            <button class="pagelink" data-page="kinetic_energy">Kinetic Energy</button>
+            <button class="pagelink" data-page="acceleration">Acceleration</button>
+          </div>
+
           <div class="title">
               <h1>Force</h1>
               <h3>Force = (mass)(acceleration) <br> F = ma</h3>
@@ -139,6 +134,13 @@
 
         <!-- Acceleration -->
         <div class="page" id="acceleration">
+          <div class="banner">
+            <button class="pagelink" data-page="homepage">Home</button>
+            <button class="pagelink" data-page="force">Force</button>
+            <button class="pagelink" data-page="kinetic_energy">Kinetic Energy</button>
+            <button class="pagelink" data-page="acceleration">Acceleration</button>
+          </div>
+
           <div class="title">
             <h1>Acceleration</h1>
             <h3>Acceleration = (final velocity - initial velocity) / (time) <br> a = (v<sub>f</sub>-v<sub>i</sub>) / t</h3>
@@ -247,6 +249,12 @@
 
         <!-- Kinetic Energy -->
         <div class="page" id="kinetic_energy">
+          <div class="banner">
+            <button class="pagelink" data-page="homepage">Home</button>
+            <button class="pagelink" data-page="force">Force</button>
+            <button class="pagelink" data-page="kinetic_energy">Kinetic Energy</button>
+            <button class="pagelink" data-page="acceleration">Acceleration</button>
+          </div>
           <div class="title">
             <h1>Kinetic Energy</h1>
             <h3>Kinetic Energy = (1/2)(mass)(velocity<sup>2</sup>) <br> KE = (1/2)mv<sup>2</sup></h3>

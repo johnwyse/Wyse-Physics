@@ -12,6 +12,14 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelectorAll('button.pagelink').forEach(button => {
       button.onclick = function() {
         showPage(this.dataset.page);
+        window.scrollTo(0,0);
+      } 
+    })
+
+    document.querySelectorAll('button.homelink').forEach(button => {
+      button.onclick = function() {
+        showPage(this.dataset.page);
+        window.scrollTo(0,0);
       } 
     })
     
