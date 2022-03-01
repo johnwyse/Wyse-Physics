@@ -31,6 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let mass = parseFloat(document.querySelector('#force_mass').value);
         let acceleration = parseFloat(document.querySelector('#acc').value);
         let force = mass*acceleration;
+        force = Number((force).toFixed(2))
 
         // Check if user input text instead of numbers, print answer
         if ((isNaN(force)) == true)
@@ -159,6 +160,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let mass = parseFloat(document.querySelector('#ke_mass').value);
         let velocity = parseFloat(document.querySelector('#vel').value);
         let ke = 0.5*mass*velocity*velocity;
+        ke = Number((ke).toFixed(2));
             
         // Check if user input text instead of numbers, print answer
         if ((isNaN(ke)) == true)
