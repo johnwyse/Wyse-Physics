@@ -96,9 +96,9 @@
           <div class="calculator">
               <h2>Force Calculator</h2>
               <form>
-                  The object's mass is: <input id="force_mass" placeholder="?" type="text"> kg
+                  The object's mass is: <input id="force_mass" autocomplete="off" placeholder="?" type="text"> kg
                   <br>
-                  The object's acceleration is:  <input id="acc" placeholder="?" type="text"> m/s/s
+                  The object's acceleration is:  <input id="acc" autocomplete="off" placeholder="?" type="text"> m/s/s
                   <br>
                   <button type="button" id="calculate_force">Solve!</button>
                   <p id="force_answer"></p>
@@ -209,11 +209,11 @@
           <div class="calculator">
               <h2>Acceleration Calculator</h2>
               <form>
-                  The object's initial velocity is: <input id="vi" placeholder="?" type="text"> m/s
+                  The object's initial velocity is: <input id="vi" autocomplete="off" placeholder="?" type="text"> m/s
                   <br>
-                  The object's final velocity is: <input id="vf" placeholder="?" type="text"> m/s
+                  The object's final velocity is: <input id="vf" autocomplete="off" placeholder="?" type="text"> m/s
                   <br>
-                  The time is:  <input id="time" placeholder="?" type="text"> s
+                  The time is:  <input id="time" autocomplete="off" placeholder="?" type="text"> s
                   <br>
                   <button type="button" id="calculate_acc">Solve!</button>
                   <p id="acc_answer"></p>
@@ -227,7 +227,6 @@
                   <button type="button" id="generate_acc">Generate New Problem</button>
                   <br>
                   <p id="acc_problem"></p>
-                  <p id="rounding"></p>
                   <input class="student_answer" id="student_acc_answer" autocomplete="off" placeholder="?" type="text">
                   <p class="unit" id="acc_unit">m/s/s</p>
                   <p id="acc_feedback"></p>

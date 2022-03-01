@@ -110,9 +110,9 @@ tr {
 
 td {
     text-align: center;
-    width: 9rem;
+    width: 20vw;
     color: var(--blue);
-    font-size: 1rem;
+    font-size: 1.1rem;
     padding: 3px;
 }
 
@@ -128,11 +128,15 @@ tr:first-child {
     display: block;
     border: 2px solid var(--blue);
     background-color: var(--light);
-    width: flex;
-    max-width: 42rem;
+    max-width: 90vw;
     margin-left: auto;
     margin-right: auto;
     padding: 3px;
+    font-size: 1rem;
+}
+
+h2 {
+  font-size: 1.5rem;
 }
 
 .inline-block {

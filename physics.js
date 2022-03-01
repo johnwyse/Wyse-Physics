@@ -125,8 +125,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let random_t = Math.floor(Math.random() * 10) + 3;
 
         // Print new problem for user
-        document.querySelector("#acc_problem").innerHTML = "What is the acceleration of a motorcycle that speeds up from " + random_vi + " m/s to " + random_vf + " m/s in " + random_t + " seconds?";
-        document.querySelector("#rounding").innerHTML = "Round to the hundredths place if necessary."
+        document.querySelector("#acc_problem").innerHTML = "What is the acceleration of a motorcycle that speeds up from " + random_vi + " m/s to " + random_vf + " m/s in " + random_t + " seconds? </br> Round to the hundredths place if necessary.";
 
         // Check answer when user submits
         document.querySelector('#check_acc').addEventListener('click', function()
